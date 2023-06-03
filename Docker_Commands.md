@@ -4,6 +4,7 @@
 ```
 docker rm -vf $(docker ps -a -q)
 ```
+
     -v: Remove all associated volumes
     -f: Forces the removal. Like, if any containers is running, you need -f to remove them.
 
