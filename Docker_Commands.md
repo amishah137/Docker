@@ -8,7 +8,10 @@ docker images
 ```
 Docker ps
 ```
-
+* To run the container
+  ```
+  docker run -it --rm -v /usr/sbin/folder1:/usr/sbin/folder1 --name SBM_250_assets -d sbm:v3.2
+  ```
 * To remove all containers,
 ```
 docker rm -vf $(docker ps -a -q)
