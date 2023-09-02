@@ -12,17 +12,19 @@
   - Docker containers start and run much faster than VM as Docker only interacts with OS kernel and VM has an application and its own OS kernel and takes time to start both of them.
   - VM does not have compatibility issue. In docker, compatibility issue may exist. 
 
-### Docker Installation
-
-
 ### Basic Structure of dockerfile
-```
-FROM python
-COPY . /app
-WORKDIR /app
-RUN pip install -r requirements.txt
-CMD pyhton app.py
-```
+  ```
+  FROM python
+  COPY . /app
+  WORKDIR /app
+  RUN pip install -r requirements.txt
+  CMD pyhton app.py
+  ```
+  - 'FROM': Specify the base image to work with.
+  - 'COPY': To copy contents of src directory (. - current directory) to destination directory (/app).
+  - 'WORKDIR /app': The absolute path to use as working directory (/app).
+  - 'RUN': an image build step, the state of the container after a RUN command will be committed to the container image. A Dockerfile can have many RUN steps that layer on top of one another to build the image.
+  - 'CMD': CMD is the command the container executes by default when you launch the built image.
 
 To build the image
 ```
