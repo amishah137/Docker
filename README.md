@@ -12,6 +12,9 @@
   - Docker containers start and run much faster than VM as Docker only interacts with OS kernel and VM has an application and its own OS kernel and takes time to start both of them.
   - VM does not have compatibility issue. In docker, compatibility issue may exist. 
 
+### Docker Installation
+
+
 ### Basic Structure of dockerfile
 ```
 FROM python
